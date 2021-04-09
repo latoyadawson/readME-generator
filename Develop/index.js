@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require("inquirer");
-const api = require('./utils/api.js');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
@@ -63,7 +62,16 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'What License is this project? (Check all that apply)',
-        choices: ['MIT License', ' GNU GPLv3 ', 'GNU AGPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'NoBoost Software License 1.0', 'The Unlicense']
+        choices: [
+            'MIT License', 
+            'GNU GPLv3 ', 
+            'GNU AGPLv3', 
+            'GNU LGPLv3', 
+            'Mozilla Public License 2.0', 
+            'Apache License 2.0', 
+            'NoBoost Software License 1.0', 
+            'The Unlicense'
+        ]
     },
     {
         type:'input',
@@ -121,23 +129,36 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writefile(fileName, data, err => {
-        if(err) {
-            return console.log(err);
-        }
-        console.log('Success! README.md file has been genereated')
-    })
+function writeFile(fileName, data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(fileName, data, err => {
+            if(err) {
+                reject(err);
+                return;
+            }
+            resolve ({
+                ok: true,
+                message: 'Success! README.md file has been genereated!'
+            });
+        });
+    });    
 }
 
 // TODO: Create a function to initialize app
-function init() {
-    const userResponse =  inquirer.prompt(questions);
+async function init() {
+    //prompt inquier question
+    const userResponse =  await inquirer.prompt(questions);
+    console.log("Your responses: ", userResponse);
+    console.log("Thank you for your responses! Creating your readME.md now!");
+    
+    //sending asnwers to markdown 
     const markdownResponse = generateMarkdown(userResponse);
     console.log(markdownResponse);
+
+    await writeFile('exampleREADME.md', markdownResponse);
 
 };
 
 // Function call to initialize app
-init();
+init()
 
