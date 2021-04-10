@@ -1,4 +1,5 @@
 
+//array for link and description of license 
 var licenseArr = [
   {
     license: 'GNU GPLv3',
@@ -49,46 +50,45 @@ function renderLicenseBadge(license) {
     return '';
   } 
     return `
-  ![badge](https://img.shields.io/badge/license-${license}-brightgreen)
-  `;
+      ![badge](https://img.shields.io/badge/license-${license}-brightgreen)
+    `;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-
 function renderLicenseLink(license) {
   if(license) {
     for( var i = 0; i< licenseArr.length; i++) {
-      if(license[0] === licenseArr[i].license) {
-        //console.log(typeof licenseArr[i].link);
-        return 
-          `${licenseArr[i].link}`
-        ;
+      if(license[0] === licenseArr[i].license) { 
+        return  `${licenseArr[i].link}`
       }  
     }
-    
   } else {
     return '';
-
   }  
 }
 
-
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-// function renderLicenseSection(license) {
-//   if(!license) {
-//     return '';
-//   }
-
-//   return `
-
-//   `;  
-
-// }
+function renderLicenseSection(license) {
+  if(license) {
+    for( var i = 0; i< licenseArr.length; i++) {
+      if(license[0] === licenseArr[i].license) {
+        return  ` 
+    ## License
+    This application is covered by the ${license} license. 
+    Link: ${renderLicenseLink(license)}
+    Description:${licenseArr[i].description}`
+      }  
+    }
+  } else {
+    return '';
+  } 
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+//console.log(data)
   return `
     # ${data.title}
 
@@ -112,18 +112,15 @@ function generateMarkdown(data) {
     ## Usage
     ${data.usage}
 
-    ## License
-    ${renderLicenseLink(data.license)}
     
-  
+    ${renderLicenseSection(data.license)}
 
-    This application is covered by the ${data.license} license. 
 
     ## Contributing
     ${data.contributing}
 
     ## Tests
-    ${data.tests}
+    ${data.test}
 
     ## Questions
     Find me on GitHub: [${data.username}](https://github.com/${data.username})

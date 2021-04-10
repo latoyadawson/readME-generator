@@ -63,12 +63,12 @@ const questions = [
         name: 'license',
         message: 'What License is this project? (Check all that apply)',
         choices: [
-            'MIT License', 
-            'GNU GPLv3 ', 
+            'GNU GPLv3', 
             'GNU AGPLv3', 
             'GNU LGPLv3', 
             'Mozilla Public License 2.0', 
             'Apache License 2.0', 
+            'MIT License',
             'NoBoost Software License 1.0', 
             'The Unlicense'
         ]
@@ -151,12 +151,10 @@ async function init() {
     console.log("Your responses: ", userResponse);
     console.log("Thank you for your responses! Creating your readME.md now!");
     
-    //sending asnwers to markdown 
+    //sending answers to markdown 
     const markdownResponse = generateMarkdown(userResponse);
     console.log(markdownResponse);
-
     await writeFile('exampleREADME.md', markdownResponse);
-
 };
 
 // Function call to initialize app
