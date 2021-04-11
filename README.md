@@ -2,6 +2,8 @@
 
 [How to create a Professional README](./readme-guide.md)
 
+![badge](https://img.shields.io/badge/license-GNU GPLv3-brightgreen)
+
 ## Description
 A node.js application that uses user input from inquirer to populate a README.md file for user repository. The README.md file is created in the dist directory and can be found [here](/develop/exampleREADME.md). The application utilizes modularization by separating the inquier call and generation of the markdown into separate modules: index js and generateMarkdown.js, respectively, inside the utils folder.
 
