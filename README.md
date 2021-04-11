@@ -9,11 +9,9 @@ The application also utilizes, as much as possible, syntax and paradigms introdu
 
 ![screenshot of startpage](Develop/assets/screenshot.png)
 
-<video width="320" height="240" controls>
-  <source src="Develop/assets/zoom_0.mp4" type="video/mp4">
-</video>
 
-![video of applicaiton](Develop/assets/zoom_0.mp4)
+
+![video of applicaiton](Develop/assets/ezgif.com-gif-maker.gif)
 
 ## Table of Contents
 * [User Story](#UserStory)
