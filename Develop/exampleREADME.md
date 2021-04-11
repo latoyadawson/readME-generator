@@ -1,12 +1,12 @@
 
-    # ReadME Generator
+    # ReadMe Generator
 
     
-      ![badge](https://img.shields.io/badge/license-Mozilla Public License 2.0-brightgreen)
+      ![badge](https://img.shields.io/badge/license-GNU GPLv3-brightgreen)
     
 
     ## Description
-    A helpful generator to automatically generate a readme for any project
+    Generatring a read me using inquirer package
 
     ## Table of Contents
     - [Description](#description)
@@ -18,24 +18,24 @@
     - [Questions](#questions)
 
     ## Installation
-    you will need to install NPM inquirer 
+    nmp install
 
     ## Usage
-    https://www.npmjs.com/package/inquirer#questions
+    can be used for any project that has/need a read me
 
     
      
     ## License
-    This application is covered by the Mozilla Public License 2.0 license. 
-    Link: https://spdx.org/licenses/MPL-2.0.html
-    Description:Permissions of this weak copyleft license are conditioned on making available source code of licensed files and modifications of those files under the same license (or in certain cases, one of the GNU licenses). Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work may be distributed under different terms and without source code for files added in the larger work.
+    This application is covered by the GNU GPLv3 license. 
+    Link: https://spdx.org/licenses/GPL-3.0-or-later.html
+    Description:Permissions of this strongest copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available.
 
 
     ## Contributing
-    No one
+    Latoya Dawson
 
     ## Tests
-    No tests
+    latoyadawson
 
     ## Questions
     Find me on GitHub: [latoyadawson](https://github.com/latoyadawson)
