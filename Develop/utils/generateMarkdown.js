@@ -49,8 +49,12 @@ function renderLicenseBadge(license) {
   if(!license) {
     return '';
   } 
+    const newLis = license[0];
+    const lis =  newLis.split(" ");
+    const finalLis = lis.join('%20')
+
     return `
-      ![badge](https://img.shields.io/badge/license-${license}-brightgreen)
+      ![badge](https://img.shields.io/badge/license-${finalLis}-brightgreen)
     `;
 }
 

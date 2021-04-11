@@ -35,7 +35,7 @@ const questions = [
     {
         type:'input',
         name: 'installation',
-        message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. (Required)',
+        message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
         validate: nameInput => {
             if(nameInput){
                 return true;
@@ -48,7 +48,7 @@ const questions = [
     {
         type:'input',
         name: 'usage',
-        message: 'Provide instructions and examples for use. (Required)',
+        message: 'Provide instructions and examples for use.',
         validate: nameInput => {
             if(nameInput){
                 return true;

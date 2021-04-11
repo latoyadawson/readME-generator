@@ -1,8 +1,8 @@
 
-    # ReadMe Generator
+    # Generatring a read me using inquirer package
 
     
-      ![badge](https://img.shields.io/badge/license-GNU GPLv3-brightgreen)
+      ![badge](https://img.shields.io/badge/license-GNU%20GPLv3-brightgreen)
     
 
     ## Description
@@ -35,7 +35,7 @@
     Latoya Dawson
 
     ## Tests
-    latoyadawson
+    none
 
     ## Questions
     Find me on GitHub: [latoyadawson](https://github.com/latoyadawson)
