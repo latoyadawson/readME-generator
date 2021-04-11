@@ -7,10 +7,6 @@ A node.js application that uses user input from inquirer to populate a README.md
 
 The application also utilizes, as much as possible, syntax and paradigms introduced in ES6 , including arrow functions, const, let, template literals, and async/await to handle the inquirer and fs.writeFile promises.
 ![screenshot of startpage](Develop/assets/screenshot2.png)
-![screenshot of startpage](Develop/assets/screenshot.png)
-
-
-
 ![video of applicaiton](Develop/assets/ezgif.com-gif-maker.gif)
 
 ## Table of Contents
